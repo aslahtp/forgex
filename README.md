@@ -252,7 +252,7 @@ npm run lint
 ### Roadmap
 
 - Live preview for React projects
-- Git integration
+- Github integration
 - Deployment support
 - Multiple project templates
 - Collaborative editing
