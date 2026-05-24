@@ -1,3 +1,14 @@
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-backend-009688)
+![LangChain](https://img.shields.io/badge/LangChain-AI-purple)
+![LangGraph](https://img.shields.io/badge/LangGraph-orchestration-orange)
+![Gemini](https://img.shields.io/badge/Gemini-LLM-blue)
+![Next.js](https://img.shields.io/badge/Next.js-14-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-blue)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-styling-38B2AC)
+![uv](https://img.shields.io/badge/uv-package--manager-yellow)
+![Pydantic](https://img.shields.io/badge/Pydantic-validation-red)
+![License](https://img.shields.io/badge/license-MIT-green)
 # MetaGPT
 
 A production-ready agentic code generation system. This system uses SOP-driven autonomous agents to transform natural language prompts into fully functional codebases.
@@ -248,10 +259,10 @@ npm run lint
 - File explorer and code viewer
 - Execution timeline
 - Agent output visualization
+- Live preview for frontend using sandbox
 
 ### Roadmap
 
-- Live preview for React projects
 - Github integration
 - Deployment support
 - Multiple project templates
