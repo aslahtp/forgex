@@ -27,7 +27,7 @@ export default function RootLayout({
         {/* Apply stored theme before first paint to prevent flash */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var t=localStorage.getItem('metagpt-ui-theme')||'dark';if(t==='dark')document.documentElement.classList.add('dark');})();`,
+            __html: `(function(){var t=localStorage.getItem('forgex-ui-theme')||localStorage.getItem('metagpt-ui-theme')||'dark';if(t==='dark')document.documentElement.classList.add('dark');})();`,
           }}
         />
         <link

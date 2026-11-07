@@ -1,1 +1,1 @@
-"""Test suite for MetaGPT backend."""
+"""Test suite for ForgeX backend."""

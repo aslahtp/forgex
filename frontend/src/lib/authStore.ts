@@ -45,7 +45,15 @@ interface AuthStore {
 function getStoredToken(): string | null {
   if (typeof window === "undefined") return null;
   try {
-    return localStorage.getItem("metagpt-token");
+    const token = localStorage.getItem("forgex-token");
+    if (token) return token;
+    // Migrate token stored under the pre-rename (MetaGPT) key
+    const legacy = localStorage.getItem("metagpt-token");
+    if (legacy) {
+      localStorage.setItem("forgex-token", legacy);
+      localStorage.removeItem("metagpt-token");
+    }
+    return legacy;
   } catch {
     return null;
   }
@@ -55,9 +63,9 @@ function storeToken(token: string | null): void {
   if (typeof window === "undefined") return;
   try {
     if (token) {
-      localStorage.setItem("metagpt-token", token);
+      localStorage.setItem("forgex-token", token);
     } else {
-      localStorage.removeItem("metagpt-token");
+      localStorage.removeItem("forgex-token");
     }
   } catch {}
 }

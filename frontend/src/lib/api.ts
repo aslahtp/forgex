@@ -8,7 +8,7 @@ const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
 
 function getAuthHeaders(): Record<string, string> {
   if (typeof window === "undefined") return {};
-  const token = localStorage.getItem("metagpt-token");
+  const token = localStorage.getItem("forgex-token");
   if (!token) return {};
   return { Authorization: `Bearer ${token}` };
 }

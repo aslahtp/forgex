@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# MetaGPT - Google Cloud Run Deployment Script
+# ForgeX - Google Cloud Run Deployment Script
 #
 # Usage:
 #   chmod +x deploy.sh
@@ -42,7 +42,7 @@ BACKEND_IMAGE="${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}/backend:lates
 FRONTEND_IMAGE="${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}/frontend:latest"
 
 echo "============================================"
-echo "  MetaGPT - Google Cloud Run Deployment"
+echo "  ForgeX - Google Cloud Run Deployment"
 echo "============================================"
 echo ""
 echo "  Project:  ${PROJECT_ID}"
@@ -70,7 +70,7 @@ gcloud artifacts repositories describe "${REPO_NAME}" \
 || gcloud artifacts repositories create "${REPO_NAME}" \
     --repository-format=docker \
     --location="${REGION}" \
-    --description="MetaGPT Docker images" \
+    --description="ForgeX Docker images" \
     --quiet
 
 # ─────────────────────────────────────────────

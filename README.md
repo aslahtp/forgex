@@ -9,7 +9,7 @@
 ![uv](https://img.shields.io/badge/uv-package--manager-yellow)
 ![Pydantic](https://img.shields.io/badge/Pydantic-validation-red)
 ![License](https://img.shields.io/badge/license-MIT-green)
-# MetaGPT
+# ForgeX
 
 A production-ready agentic code generation system. This system uses SOP-driven autonomous agents to transform natural language prompts into fully functional codebases.
 

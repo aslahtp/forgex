@@ -362,7 +362,7 @@ export const EDITOR_THEMES: EditorThemeOption[] = [
     },
   },
   {
-    id: "metagpt-home",
+    id: "forgex-home",
     label: "ForgeX Home (Default)",
     base: "vs-dark",
     swatch: ["#1d1b15", "#f0ede8", "#e8b86d"],
@@ -563,7 +563,7 @@ export const EDITOR_THEMES: EditorThemeOption[] = [
   },
 ];
 
-export const DEFAULT_THEME = "metagpt-home";
+export const DEFAULT_THEME = "forgex-home";
 
 /** Register all custom themes with Monaco */
 export function registerCustomThemes(monaco: any) {

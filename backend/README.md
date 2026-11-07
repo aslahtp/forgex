@@ -1,6 +1,6 @@
-# MetaGPT Backend
+# ForgeX Backend
 
-FastAPI backend for the MetaGPT agentic system.
+FastAPI backend for the ForgeX agentic system.
 
 ## Quick Start
 

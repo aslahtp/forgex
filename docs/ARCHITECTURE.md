@@ -1,13 +1,13 @@
-## MetaGPT – Architecture Overview
+## ForgeX – Architecture Overview
 
-This document gives a concise, high‑level overview of the MetaGPT architecture.  
+This document gives a concise, high‑level overview of the ForgeX architecture.  
 For deep implementation details, see `docs/TECHNICAL_OVERVIEW.md`.
 
 ---
 
 ## 1. System at a Glance
 
-MetaGPT is a **production‑ready agentic code generation system** built around a multi‑stage LLM pipeline:
+ForgeX is a **production‑ready agentic code generation system** built around a multi‑stage LLM pipeline:
 
 ```text
 User (Browser / API client)

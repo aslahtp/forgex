@@ -1,6 +1,6 @@
-## MetaGPT – Technical Architecture & Internals
+## ForgeX – Technical Architecture & Internals
 
-This document provides a detailed, implementation‑oriented overview of the MetaGPT project. It is intended for engineers who want to:
+This document provides a detailed, implementation‑oriented overview of the ForgeX project. It is intended for engineers who want to:
 
 - Understand how all parts of the system fit together
 - Navigate the codebase efficiently

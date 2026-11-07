@@ -5,16 +5,16 @@
 import { create } from "zustand";
 import type { Project, FileTreeNode, ChatMessage, GeneratedFile } from "./api";
 
-const EDITOR_THEME_SESSION_KEY = "metagpt-editor-theme-session";
+const EDITOR_THEME_SESSION_KEY = "forgex-editor-theme-session";
 
-/** Default editor theme by UI theme: dark → metagpt-home, light → vs */
+/** Default editor theme by UI theme: dark → forgex-home, light → vs */
 export function getDefaultEditorThemeForUi(uiTheme: "dark" | "light"): string {
-  return uiTheme === "light" ? "vs" : "metagpt-home";
+  return uiTheme === "light" ? "vs" : "forgex-home";
 }
 
 // Helper to get initial editor theme: session override if set, else default for current UI theme.
 function getStoredTheme(): string {
-  if (typeof window === "undefined") return "metagpt-home";
+  if (typeof window === "undefined") return "forgex-home";
   try {
     const sessionOverride = sessionStorage.getItem(EDITOR_THEME_SESSION_KEY);
     if (sessionOverride) return sessionOverride;
@@ -22,14 +22,16 @@ function getStoredTheme(): string {
     const uiTheme = getStoredUiTheme();
     return getDefaultEditorThemeForUi(uiTheme);
   } catch {
-    return "metagpt-home";
+    return "forgex-home";
   }
 }
 
 function getStoredUiTheme(): "dark" | "light" {
   if (typeof window === "undefined") return "dark";
   try {
-    const stored = localStorage.getItem("metagpt-ui-theme");
+    // Fall back to the pre-rename (MetaGPT) key so existing preferences carry over
+    const stored =
+      localStorage.getItem("forgex-ui-theme") ?? localStorage.getItem("metagpt-ui-theme");
     return stored === "light" ? "light" : "dark";
   } catch {
     return "dark";
@@ -98,7 +100,7 @@ interface ProjectStore {
   // Editor theme
   editorTheme: string;
   setEditorTheme: (theme: string) => void;
-  /** When true, editor theme follows UI theme (dark → metagpt-home, light → vs). Default true. */
+  /** When true, editor theme follows UI theme (dark → forgex-home, light → vs). Default true. */
   editorThemeAuto: boolean;
   setEditorThemeAuto: (auto: boolean) => void;
 
@@ -227,7 +229,7 @@ export const useProjectStore = create<ProjectStore>((set) => ({
   uiTheme: getStoredUiTheme(),
   setUiTheme: (theme) => {
     try {
-      localStorage.setItem("metagpt-ui-theme", theme);
+      localStorage.setItem("forgex-ui-theme", theme);
     } catch {}
     set({ uiTheme: theme });
   },
